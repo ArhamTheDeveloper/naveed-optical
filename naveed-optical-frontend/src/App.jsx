@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductsPage from './pages/ProductsPage';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   const location = useLocation();
@@ -20,10 +21,13 @@ function App() {
   }, [location]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/products" element={<ProductsPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductsPage />} />
+      </Routes>
+      <FloatingWhatsApp />
+    </>
   );
 }
 

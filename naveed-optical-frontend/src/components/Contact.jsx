@@ -2,18 +2,18 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp, FaClock } from 'rea
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-navy text-white pt-24 pb-12 relative overflow-hidden">
+    <section id="contact" className="bg-navy text-white pt-20 md:pt-24 pb-10 md:pb-12 relative overflow-hidden scroll-mt-20">
       {/* Decorative */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-12 lg:mb-16">
           
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
               <div className="h-1 w-20 bg-gold rounded mb-6"></div>
               <p className="text-gray-300 text-lg">
                 Visit our store to check out our collection or contact us directly via WhatsApp for quick orders and inquiries.
@@ -22,27 +22,27 @@ const Contact = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-navy-light p-3 rounded-full text-gold mt-1">
+                <div className="bg-navy-light p-3 rounded-full text-gold mt-1 flex-shrink-0">
                   <FaMapMarkerAlt className="text-xl" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl mb-1">Our Store</h4>
-                  <p className="text-gray-300">Shop #4, Main Market, Optics Plaza<br/>Lahore, Pakistan</p>
+                  <p className="text-gray-300">Naveed Optical Center<br/>Shikarpur, Sindh, Pakistan</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-navy-light p-3 rounded-full text-gold mt-1">
+                <div className="bg-navy-light p-3 rounded-full text-gold mt-1 flex-shrink-0">
                   <FaPhoneAlt className="text-xl" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl mb-1">Phone</h4>
-                  <p className="text-gray-300">+92 333 7269499</p>
+                  <a href="tel:+923337269499" className="text-gray-300 hover:text-gold transition-colors">+92 333 7269499</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-navy-light p-3 rounded-full text-gold mt-1">
+                <div className="bg-navy-light p-3 rounded-full text-gold mt-1 flex-shrink-0">
                   <FaClock className="text-xl" />
                 </div>
                 <div>
@@ -56,18 +56,18 @@ const Contact = () => {
               href="https://wa.me/923337269499" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-transform hover:-translate-y-1 shadow-lg"
+              className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-transform hover:-translate-y-1 shadow-lg w-full sm:w-auto justify-center"
             >
-              <FaWhatsapp className="text-3xl" />
+              <FaWhatsapp className="text-2xl sm:text-3xl" />
               Chat on WhatsApp
             </a>
           </div>
 
           {/* Google Maps Embed */}
-          <div className="bg-navy-light rounded-3xl p-4 shadow-2xl border border-white/10">
+          <div className="bg-navy-light rounded-3xl p-3 sm:p-4 shadow-2xl border border-white/10">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.332409434557!2d68.6304603744009!3d27.953104314611334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39343b0805969ef5%3A0x844bad0143f5519f!2sNaveed%20Optical%20Center%20Shikarpur!5e0!3m2!1sen!2s!4v1773771701546!5m2!1sen!2s" 
-              className="w-full h-full min-h-[400px] rounded-2xl"
+              className="w-full h-full min-h-[280px] sm:min-h-[400px] rounded-2xl"
               style={{ border: 0 }}
               allowFullScreen="" 
               loading="lazy" 
@@ -79,12 +79,9 @@ const Contact = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center gap-3 justify-between text-gray-400 text-sm text-center md:text-left">
           <p>&copy; {new Date().getFullYear()} Naveed Optical. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
-          </div>
+          <p className="text-gray-500">Questions about your order or our policies? <a href="https://wa.me/923337269499" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Message us on WhatsApp</a></p>
         </div>
 
       </div>

@@ -4,7 +4,7 @@ import Contact from '../components/Contact';
 
 const ProductsPage = () => {
   return (
-    <div className="font-sans antialiased text-gray-900 bg-white">
+    <div className="font-sans antialiased text-gray-100 bg-ink">
       <Navbar />
       <main>
         <Products />
